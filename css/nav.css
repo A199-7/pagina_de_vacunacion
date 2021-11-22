@@ -1,0 +1,35 @@
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+header{
+    position: relative;
+    margin: auto;
+    text-align: center;
+    padding: 0px;
+}
+nav{
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    background:dodgerblue ;
+    color: white;
+}
+nav ul{
+    padding-left: 31%;
+    position: relative;
+    margin: auto;
+    width: 75%;
+    list-style: none;
+}
+nav ul li{
+    display: inline-block;
+    width: 20%;
+    line-height: 50px;
+}
+nav ul li a{
+    color: white;
+}
+
