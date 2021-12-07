@@ -46,7 +46,7 @@
             </div>
 
             <li class="nav-item">
-                <a class="nav-link" href="perfil.html">
+                <a class="nav-link" href="perfil_exter.html">
                     <i class="fas fa-fw fa-table"></i>
                     <span>PERFIL</span></a>
             </li>
@@ -59,12 +59,12 @@
                 Addons
             </div>
             <li class="nav-item">
-                <a class="nav-link" href="/Materias_y_Notas">
+                <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Exquema de vacunacion</span></a>
             </li> 
             <li class="nav-item">
-                <a class="nav-link" href="/agendar_cita.html">
+                <a class="nav-link" href="agendar_cita.html">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Agendar citas para vacunas</span></a>
             </li> 
@@ -128,41 +128,52 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
                     <!-- Page Heading -->
-                    <div class="card shadow mb-4"><!-- INICIO TABLA VACUNAS -->
+                    
+                    <div class="card shadow mb-4"> <!-- PRINCIPIO DE EDITAR-->
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Notificaciones Hechas</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Agendar Cita</h6>
+                            <h6 class="form-label">Digita todos los campos para agendar la cita  para la vacunacion</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th scope="col">Cedula</th>
+                                            <th scope="col">Identificacion</th>
                                             <th scope="col">Nombre</th>
-                                            <th scope="col">Comentario</th>
-                                            <th scope="col">Usuario interno</th>
+                                            <th scope="col">edad</th>
+                                            <th scope="col">eps</th>
+                                            <th scope="col">VACUNA</th>
+                                            <th scope="col">Agendar</th>
                                         </tr>
                                         </thead>
                                         <tfoot>
                                         </tfoot>
-                                        <!----> 
+
                                         <tbody>
 
                                         <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
+                                            <form method="POST" action="/Dashboard">
+                                                <td><input type="text"class="form-control " name="Cedula" id="Cedula" placeholder="Identificacion" onkeypress="return justNumbers(event);" maxlength="10"  required></td>
+                                                <td><input type="text"class="form-control " name="nombre" id="nombre"placeholder="Nombre" > </td>
+                                                <td><input type="text"class="form-control " name="apellido" id="apellido" placeholder="Apellidos" ></td>
+                                                <td><input type="password"class="form-control " name="pass" id="pass" placeholder="Contraseña" ></td>
+                                                <td><select name="TabB" id="TabB"  class="form-control" >
+                                                    <option value="">...</option>
+                                                    <option value="1">Estudiantes</option>
+                                                    <option value="2">Docentes</option>
+                                                    <option value="3">Administradores</option></select>
+                                                </td>
+                                                <td align="center" ><button class="btn btn-success btn-sm rounded-0" type="submit" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button></td>
+                                            </form>
                                         </tr>
 
                                         </tbody>
-                                        <!----> 
 
                                     </table>
-                                </div>
                             </div>
                         </div>
-                    </div><!-- FINAL TABLA DE MATERIAS-->
+                    </div><!--Final de Editar-->
                 </div>
             </div>
             <!-- End of Main Content -->
